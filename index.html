@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>ZWubi Editor</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<script src="js/PhraseStorage.js"></script>
+		<script src="js/MainUI.js"></script>
+		<script src="js/ChStr.js"></script>
+		<script src="js/DownloadUtil.js"></script>
+		<script src="js/PhraseUtil.js"></script>
+		<script src="js/MsWubi.js"></script>
+		<script src="js/DdWubi.js"></script>
+		<script src="js/JdWubi.js"></script>
+		<script src="js/BdWubi.js"></script>
+		<script>
+		</script>
+	</head>
+	<body>
+		<div class="zmain">
+			<div class="ztitle">ZWubi Editor</div>
+			<div class="zfile-area">
+				<input type="file" accept="text/plain" id="real-file-btn"/>
+				<input type="button" value="选择多多码表文件" class="zbtn" id="sel-file-btn"/>
+				<span class="zfile-name-label" id="zfile-name-label">未选择文件</span>
+				<span class="zoper-tip-label" id="oper-tip-label"></span>
+			</div>
+			<div class="edit-div">
+				<div class="upt-div">
+					<div>
+						<span>输入编码查询:</span><input type="text" id="code-ipt" class="code-ipt" maxlength="4" onpaste="return false;"/>
+					</div>
+					<div>
+						<ul class="phrase-ul" id="phrase-ul">
+						</ul>
+					</div>
+					
+				</div>
+				<div style="clear:both;"></div>
+				<div class="add-div">
+					<div>
+						<textarea id="add-phrase-area"></textarea>
+					</div>
+					<div>
+						<input type="button" value="生成编码" id="tran-code-btn" />
+						<input type="button" name="" id="save-code-btn" value="添加词条" />
+						<input type="button" name="" id="clear-code-btn" value="清除全部" />
+					</div>
+					<div>
+						<textarea readonly="true" id="code-phrase-area"></textarea>
+					</div>
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+			<div class="file-save-div">
+				<ul>
+					<li><input type="button" value="多多格式" class="zbtn" id="duoduo-wb-btn"/></li>
+					<li><input type="button" value="微软主词库" class="zbtn" id="ms-wb-btn"/>
+					<br>
+					<input style="margin-top:12px;" type="button" value="微软自定义短语" class="zbtn" id="ms-wb-dat-btn"/>
+					</li>
+					<li><input type="button" value="手机百度格式" class="zbtn" id="baidu-wb-btn"/></li>
+					<li><input type="button" value="极点格式" class="zbtn" id="jidian-wb-btn"/></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
